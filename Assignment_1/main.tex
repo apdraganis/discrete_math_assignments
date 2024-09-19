@@ -1,1 +1,188 @@
+\documentclass[a4paper,11pt]{article}
 
+% Import packages
+\usepackage[a4paper]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+
+% Change enumerate environments you use letters
+\renewcommand{\theenumi}{\alph{enumi}}
+
+% Set title, author name and date
+\title{Peergrade assignment 1}
+\author{}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section*{Exercise 1}
+\begin{enumerate}
+    \item 
+         $\frac{5}{3}x + \frac{2}{5} = 7$ \\\\
+         $15 \cdot \frac{5}{3}x + 15 \cdot \frac{2}{5} = 15 \cdot 7$\hfill Multiply all terms by the LCM\footnote{Least Common Multiple} of denominators\\\\
+         $5 \cdot 5x + 3 \cdot 2 = 15 \cdot 7$\hfill Reduce fractions\\\\
+         $25x + 6 = 105$\hfill Perform multiplications\\\\
+         $(25x + 6) - 6 = (105) - 6$\hfill Subtract 6 from each side\\\\
+         $25x = 99$\hfill Perform subtraction\\\\
+         $\frac{25x}{25} = \frac{99}{25}$\hfill Divide each side by 25\\\\
+         $x = \frac{99}{25}$\hfill Reduce fractions where possible\\\\
+    \item 
+         $\frac{4}{1+x} + \frac{15}{4} = 5$ \\\\
+         $4 \cdot (1+x) \cdot \frac{4}{1+x} + 4 \cdot (1+x) \cdot \frac{15}{4} = 4 \cdot (1+x) \cdot 5$\hfill ~~~~Multiply all terms by the LCM of the denominators\\\\
+         $4 \cdot 4 + (1+x) \cdot 15 = 4 \cdot (1+x) \cdot 5$\hfill Reduce fractions\\\\
+         $16 + 15 + 15x = 20 + 20x$\hfill Perform multiplications (use distributive property)\\\\
+         $31 + 15x = 20 + 20x$\hfill Add terms where appropriate\\\\
+         $(31 + 15x) - 20 = (20 + 20x) - 20$\hfill Subtract 20 from each side\\\\
+         $(11 + 15x) - 15x = (20x) - 15x$\hfill Subtract 15x from each side\\\\
+         $11 = 5x$\hfill Perform subtraction\\\\
+         $\frac{11}{5} = \frac{5x}{5}$\hfill Divide each side by 5\\\\
+         $\frac{11}{5} = x$\hfill Reduce fractions where possible\\\\
+    \item 
+         $|\frac{4x}{5}| = (\frac{1}{2} - \frac{1}{3}) ^{-1}$ \\\\
+         $(\frac{1}{2} - \frac{1}{3}) ^{-1}$\hfill Isolate right side\\\\
+         $(\frac{3}{3} \cdot \frac{1}{2} - \frac{2}{2} \cdot \frac{1}{3}) ^{-1}$\hfill Multiply each fraction with the denominator of the other (also expressed as fraction)\\\\
+         $(\frac{3}{6} - \frac{2}{6}) ^{-1}$\hfill Perform multiplications\\\\
+         $(\frac{1}{6}) ^{-1}$\hfill Perform subtraction\\\\
+         $6$\hfill A negative exponent indicates the reciprocal of the base\\\\
+         $|\frac{4x}{5}| = 6$\hfill Rewrite the initial equation\\\\
+         $\frac{4x}{5} = 6$ ~or~ $\frac{4x}{5} = -6$\hfill Remove absolute\\\\
+         $5 \cdot \frac{4x}{5} = 5 \cdot 6$ ~or~ $5 \cdot \frac{4x}{5} = 5 \cdot (-6)$\hfill Multiply each side by 5\\\\
+         $4x = 30$ ~or~ $4x = -30$\hfill Perform multiplications and reduce fractions\\\\
+         $\frac{4x}{4} = \frac{30}{4}$ ~or~ $\frac{4x}{4} = -\frac{30}{4}$\hfill Divide each side by 4\\\\
+         $x = \frac{15}{2}$ ~or~ $x = -\frac{15}{2}$\hfill Reduce fractions\\\\
+    \item 
+         $\frac{x-3}{3} = 2(\frac{2+x}{5} + 1)$ \\\\
+         $\frac{x-3}{3} = \frac{4+2x}{5} + 2$\hfill Apply distributive property on the right side\\\\
+         $15 \cdot (\frac{x-3}{3}) = 15 \cdot (\frac{4+2x}{5}) + 15 \cdot 2$\hfill ~~Multiply all terms by the LCM of the denominators\\\\
+         $5(x-3) = 3(4+2x) + 15 \cdot 2$\hfill Reduce fractions\\\\
+         $5x - 15 = 12 + 6x + 30$\hfill Perform multiplications (apply distributive property)\\\\
+         $(5x - 15) + 15 = (12 + 6x + 30) + 15$\hfill Add 15 to each side\\\\
+         $5x = 6x + 57$\hfill Add terms where appropriate\\\\
+         $(5x) - 5x = (6x + 57) - 5x$\hfill Subtract 5x from each side\\\\
+         $0 = x + 57$\hfill Perform subtraction\\\\
+         $-57 = (x + 57) - 57$\hfill Subtract 57 from each side\\\\
+         $-57 = x$\hfill Perform subtraction\\\\
+\end{enumerate}
+
+\section*{Exercise 2}
+\begin{enumerate}
+    \item %(a) disjunction p ∨ q,
+        $p \vee q$\\\\
+        $\equiv \neg (\neg p) \vee q$~~~~~~~~~~by the double negative law (6)\\\\
+        $\equiv \neg p \rightarrow q$~~~~~~~~~~~~~by the conditional logical equivalence (12)
+
+        \begin{displaymath}
+        \begin{array}{|c c|c|c|c|c|c|}
+        p & q & \neg p & p \vee q & \neg (\neg p) & \neg (\neg p) \vee q & \neg p \rightarrow q\\
+        \hline % Put a horizontal line between the table header and the rest.
+        T & T & F & T & T & T & T\\
+        T & F & F & T & T & T & T\\
+        F & T & T & T & F & T & T\\
+        F & F & T & F & F & F & F\\
+        \end{array}
+        \end{displaymath}
+
+        From the columns 5 and 6 of the truth table it is clear that the formula in every step is logically equivalent to the initial formula (column 3).\\
+    \item % conjunction p ∧ q
+        $p \wedge q$\\\\
+        $\equiv \neg (\neg p \vee \neg q)$~~~~~~~~~~by De Morgan's law for $\vee$ (9)\\\\
+        $\equiv \neg (p \rightarrow \neg q)$~~~~~~~~~~~by the conditional logical equivalence (12)
+
+        \begin{displaymath}
+        \begin{array}{|c c|c|c|c|c|c|c|c|}
+        p & q & \neg p & \neg q & p \wedge q & \neg p \vee \neg q & \neg (\neg p \vee \neg q) & p \rightarrow \neg q & \neg (p \rightarrow \neg q)\\
+        \hline % Put a horizontal line between the table header and the rest.
+        T & T & F & F & T & F & T & F & T\\
+        T & F & F & T & F & T & F & T & F\\
+        F & T & T & F & F & T & F & T & F\\
+        F & F & T & T & F & T & F & T & F\\
+        \end{array}
+        \end{displaymath}
+
+        From the columns 6 and 8 of the truth table it is clear that the formula in every step is logically equivalent to the initial formula (column 4).\\
+    \item %biconditional p ↔ q
+        $p \leftrightarrow q$\\\\
+        $\equiv (p \rightarrow q) \wedge (q \rightarrow p)$~~~~~~~~~~~~by the biconditional logical equivalence (13)\\\\
+        $\equiv \neg(\neg(p \rightarrow q) \vee \neg(q \rightarrow p))$~~~~by De Morgan's law for $\wedge$ (9)\\\\
+        $\equiv \neg((p \rightarrow q) \rightarrow \neg(q \rightarrow p))$~~~~~by the conditional logical equivalence (12)\\\\        
+        \begin{displaymath}
+        \begin{array}{|c c|c|c|c|c|c|c|c|c|c|c|}
+        p & q & p \rightarrow q & q \rightarrow p & p \leftrightarrow q & \neg(p \rightarrow q) & \neg(q \rightarrow p) & (p \rightarrow q) \wedge (q \rightarrow p) & \neg(p \rightarrow q) \vee \neg(q \rightarrow p)\\
+        \hline % Put a horizontal line between the table header and the rest.
+        T & T & T & T & T & T & F & F & F\\
+        T & F & F & T & F & F & T & F & T\\
+        f & T & T & F & F & F & F & T & T\\
+        F & F & T & T & T & T & F & F & F\\
+        \end{array}
+        \end{displaymath}
+
+        \begin{displaymath}
+        \begin{array}{|c|c|c|}
+        \neg(\neg(p \rightarrow q) \vee \neg(q \rightarrow p) & (p \rightarrow q) \rightarrow \neg(q \rightarrow p) & \neg((p \rightarrow q) \rightarrow \neg(q \rightarrow p))\\
+        \hline % Put a horizontal line between the table header and the rest.
+        T & F & T\\
+        F & T & F\\
+        F & T & F\\
+        T & F & T\\
+        \end{array}
+        \end{displaymath}
+
+        From the columns 7, 9 and 11 of the truth table it is clear that the formula in every step is logically equivalent to the initial formula (column 4).
+        \\
+\end{enumerate}
+
+\section*{Exercise 3}
+\begin{enumerate}
+    \item 
+        $(p \rightarrow r) \wedge (q \rightarrow r) \equiv (p \vee q) \rightarrow r$\\\\
+        $(p \rightarrow r) \wedge (q \rightarrow r)$~~~~~~~~~~~~~rewrite left side\\\\
+        $\equiv (\neg p \vee r) \wedge (\neg q \vee r)$~~~~~~~~by the conditional logical equivalence (12) on $(p \rightarrow r)$\\\\
+        $\equiv (r \vee \neg p) \wedge (r \vee \neg q)$~~~~~~~~by the commutative law for $\vee$ (1)\\\\
+        $\equiv r \vee (\neg p \wedge \neg q)$~~~~~~~~~~~~~~~by the distributive law for $\vee$ (3)\\\\
+        $\equiv r \vee \neg(p \vee q)$~~~~~~~~~~~~~~~~~by De Morgan's law (9)\\\\
+        $\equiv \neg (p \vee q) \vee r$~~~~~~~~~~~~~~~~~by the commutative law for $\vee$ (1)\\\\
+        $\equiv (p \vee q) \rightarrow r$~~~~~~~~~~~~~~~~~by the conditional logical equivalence (12)\\\\
+    \item %(p ∧ ∼q) → r ≡ (p ∧ ∼r) → q
+        $(p \wedge \neg q) \rightarrow r \equiv (p \wedge \neg r) \rightarrow q$\\\\
+        $(p \wedge \neg q) \rightarrow r$~~~~~~~~~~~~~~rewrite left side\\\\
+        $\equiv \neg (p \wedge \neg q) \vee r$~~~~~~~~~~by the conditional logical equivalence (12)\\\\
+        $\equiv r \vee \neg (p \wedge \neg q)$~~~~~~~~~~by the commutative law for $\vee$ (1)\\\\
+        $\equiv r \vee \neg (\neg (\neg p \vee q))$~~~~~~by De Morgan's law (9)\\\\
+        $\equiv r \vee (\neg p \vee q)$~~~~~~~~~~~~by the double negative law (6)\\\\
+        $\equiv (r \vee \neg p) \vee q$~~~~~~~~~~~~by the associative law for $\vee$ (2)\\\\
+        $\equiv \neg (\neg r \wedge p) \vee q$~~~~~~~~~~by De Morgan's law (9)\\\\
+        $\equiv \neg (p \wedge \neg r) \vee q$~~~~~~~~~~by the commutative law for $\wedge$ (1)\\\\
+        $\equiv \neg(\neg(p \wedge \neg r)) \rightarrow q$~~~~by the conditional logical equivalence (12)\\\\
+        $\equiv (p \wedge \neg r) \rightarrow q$~~~~~~~~~~~by the double negative law (6)\\\\
+    \item %(p ∧ q) → r ≡ p → (q → r)
+        $(p \wedge q) \rightarrow r \equiv p \rightarrow (q \rightarrow r)$\\\\
+        $(p \wedge q) \rightarrow r$~~~~~~~~~~~~~~~~~rewrite left side\\\\
+        $\equiv \neg(p \wedge q) \vee r$~~~~~~~~~~~~~by the conditional logical equivalence (12)\\\\
+        $\equiv \neg(\neg(\neg p \vee \neg q)) \vee r$~~~~~by De Morgan's law for $\wedge$ (9)\\\\
+        $\equiv (\neg p \vee \neg q) \vee r$~~~~~~~~~~~by the double negative law (6)\\\\
+        $\equiv \neg p (\neg q \vee r)$~~~~~~~~~~~~~~by the associative law for $\vee$ (2)\\\\
+        $\equiv \neg p \vee (q \rightarrow r)$~~~~~~~~~~~by the conditional logical equivalence (12) on $(\neg q \vee r)$\\\\
+        $\equiv p \rightarrow (q \rightarrow r)$~~~~~~~~~~~~by the conditional logical equivalence (12)\\\\
+    \item %∼((p → q) ∧ ∼q) ∨ ∼p ≡ t
+        $\neg((p \rightarrow q) \wedge \neg q) \vee \neg p \equiv t$\\\\
+        $\neg((p \rightarrow q) \wedge \neg q) \vee \neg p$~~~~~~~~~~~~~~~~~~~rewrite left side\\\\\
+        $\equiv \neg ((\neg p \vee q) \wedge \neg q) \vee \neg p$~~~~~~~~~~~~~~by the conditional logical equivalence (12) on $(p \rightarrow q)$\\\\
+        $\equiv \neg (\neg q \wedge (\neg p \vee q)) \vee \neg p$~~~~~~~~~~~~~~~by the commutative law for $\wedge$ (1)\\\\
+        $\equiv \neg ((\neg q \wedge \neg p) \vee (\neg q \wedge q)) \vee \neg p$~~~~~~by the distributive law for $\wedge$ (3)\\\\
+        $\equiv \neg ((\neg q \wedge \neg p) \vee c) \vee \neg p$~~~~~~~~~~~~~~~by the negation law for $\wedge$ (5)\\\\
+        $\equiv \neg (\neg q \wedge \neg p) \vee \neg p$~~~~~~~~~~~~~~~~~~~~~~by the identity law for $\vee$ (4)\\\\
+        $\equiv \neg (\neg (q \vee p)) \vee \neg p$~~~~~~~~~~~~~~~~~~~~~by De Morgan's law for $\wedge$ (9)\\\\
+        $\equiv (q \vee p) \vee \neg p$~~~~~~~~~~~~~~~~~~~~~~~~~~~by the double negative law (6)\\\\
+        $\equiv (p \vee q) \vee \neg p$~~~~~~~~~~~~~~~~~~~~~~~~~~~by the commutative law for $\vee$ (1)\\\\
+        $\equiv \neg p \vee (p \vee q)$~~~~~~~~~~~~~~~~~~~~~~~~~~~by the commutative law for $\vee$ (1)\\\\
+        $\equiv (\neg p \vee p) \vee q$~~~~~~~~~~~~~~~~~~~~~~~~~~~by the associative law for $\vee$ (2)\\\\
+        $\equiv t \vee q$~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~by the negation law for $\vee$ (5)\\\\
+        $\equiv t$~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~by the universal bound law for $\vee$ (8)
+\end{enumerate}
+
+
+\end{document}
