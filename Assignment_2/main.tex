@@ -1,1 +1,106 @@
+\documentclass[a4paper,11pt]{article}
 
+% Import packages
+\usepackage[a4paper]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{xcolor}
+% \usepackage{enclose}
+
+% Change enumerate environments you use letters
+\renewcommand{\theenumi}{\alph{enumi}}
+
+% Set title, author name and date
+\title{Peergrade assignment 2}
+\author{}
+\date{\today}
+
+\newcommand\Mydiv[2]{%
+$\strut#1$\kern.25em\smash{\raise.3ex\hbox{$\big)$}}$\mkern-8mu
+        \overline{\enspace\strut#2}$}
+
+\begin{document}
+
+\maketitle
+
+\section*{Exercise 1}
+\begin{enumerate}
+    \item $(A \cup C) \cap B = \{1, 2, 4\}$
+    \item $A \cup (C - B) = \{2, 3, 4, 5\}$
+    \item $C \times A = \{(1, 2), (1, 4), (3, 2), (3, 4), (5, 2), (5, 4)\}$
+    \item $\mathcal{P}(A) = \{\emptyset, \{2\}, \{4\}, \{2, 4\}\}$
+    \item $B^\complement \cap C = \{3, 5\}$\\
+\end{enumerate}
+
+\section*{Exercise 2}
+\begin{enumerate}
+    % $\Mydiv{2346}{6256}$
+    % \begin{array}{r}4\\ 5\enclose{longdiv}{20}\\20\\ \hline 0\end{array}
+    $\begin{array}{r}2\\ \Mydiv{2346}{6256}\\ 4692\\ \hline 1564\end{array}$\hfill Divide 6256 by 2346 \\\\
+    $6256 = 2346 \cdot 2 + 1564$ \hfill by the Quotient-Remainder Theorem \\
+    \begin{array}{cc}& & \end{array} \hfill (Theorem 4.5.1 of textbook) \\\\
+    gcd(6256, 2346) = gcd(2346, 1564) \hfill by Lemma 4.10.2 of textbook \\\\
+    $\begin{array}{r}1\\ \Mydiv{1564}{2346}\\ 1564\\ \hline 782\end{array}$\hfill Divide 2346 by 1564 \\\\
+    $2346 = 1564 \cdot 1 + 782$ \hfill by the Quotient-Remainder Theorem \\\\
+    gcd(2346, 1564) = gcd(1564, 782) \hfill by Lemma 4.10.2 of textbook \\\\
+    $\begin{array}{r}2\\ \Mydiv{782}{1564}\\ 1564\\ \hline 0\end{array}$\hfill Divide 1564 by 782 \\\\
+    $1564 = 782 \cdot 2 + 0$ \hfill by the Quotient-Remainder Theorem \\\\
+    gcd(1564, 782) = gcd(782, 0) \hfill by Lemma 4.10.2 of textbook \\\\
+    gcd(6256, 2346) = gcd(2346, 1564) \hfill Put together all equations \\
+    = gcd(1564, 782)  \\
+    = gcd(782, 0) \\
+    = 782 \hfill by Lemma 4.10.1 of textbook \\\\
+    Therefore, gcd(6256, 2346) = 782. \\
+\end{enumerate}
+
+
+\section*{Exercise 3}
+\begin{enumerate}
+    \item For all integers $a$ and $b$, if $a$ is odd and $b$ is odd, then $a + b$ is even. \\\\
+        Let a and b be odd integers. \\
+      %     \begin{equation}\label{eqn:einstein}
+      %   E=mc^2\tag{1}
+      % \end{equation}
+        By the first fact given by the assingment, since $a$ and $b$ are odd, there is an integer $k$ such that
+        \begin{equation} \label{eqn:firstOdd}
+            a = 2k + 1
+        \end{equation} \\
+        and there is also an integer $r$ such that 
+        \begin{equation} \label{eqn:secondOdd}
+            b = 2r + 1
+        \end{equation} \\
+        From \eqref{eqn:firstOdd} and \eqref{eqn:secondOdd}, the sum of $a$ and $b$ is\\
+        \begin{equation*}
+        \begin{split}
+        a + b &= (2k + 1) + (2r + 1)\\
+         & = 2k + 2r + 2 \\\\
+        \end{split}
+        \end{equation*}
+        And by the distributive law
+        \begin{equation*}
+        a + b = 2 \cdot (k + r + 1)
+        \end{equation*} \\
+        where $(k + r + 1)$ is an integer (let's name it $n$) since it is the sum of integers. \\\\
+        Thus, $a + b = 2 \cdot n$ and by the second fact given by the assignment, $a + b$ is even.
+    \item For all integers $a$, $b$ and $c$, if $a \nmid bc$ then $a \nmid b$. \\\\
+        \textit{Contrapositive}: For all integers $a$,$b$ and $c$, if $a \mid b$ then $a \mid bc$. \\\\
+        By definition of divisibility, since $a \mid b$, there is an integer $k$ such that
+        \begin{equation*}
+        b = a \cdot k
+        \end{equation*} \\
+        By multiplying each side by $c$ and ,
+        \begin{equation*}
+        bc = (a \cdot k) \cdot c
+        \end{equation*} \\
+        By the associative law for multiplication $(a \cdot k) \cdot c = a \cdot (k \cdot c)$. Hence
+        \begin{equation*}
+        bc = a \cdot (k \cdot c)
+        \end{equation*} \\
+        where $(k \cdot c)$ is an integer (let's name it $n$) since it is the product of integers. \\\\
+        Thus, $bc = a \cdot n$ and by the definition of divisibility, $a \mid bc$. \\\\
+        Since the statement "if $a \mid b$ then $a \mid bc$" is true, by contraposition, the statement "if $a \nmid bc$ then $a \nmid b$." is also true.
+\end{enumerate}
+
+\end{document}
